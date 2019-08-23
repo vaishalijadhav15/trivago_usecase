@@ -3,7 +3,7 @@ phases:
     commands:
       - echo Cloning Github...
       - git clone https://github.com/vaishalijadhav15/trivago_usecase.git
-      - wget 'https://github.com/vaishalijadhav15/trivago_usecase/blob/master/Dockerfile.txt'
+      - wget 'https://github.com/vaishalijadhav15/trivago_usecase/blob/master/Dockerfile'
 
 
   build:
