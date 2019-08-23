@@ -1,0 +1,20 @@
+phases:
+  pre_build:
+    commands:
+      - echo Cloning Github...
+      - git clone https://github.com/vaishalijadhav15/trivago_usecase.git
+      - wget 'https://github.com/vaishalijadhav15/trivago_usecase/blob/master/Dockerfile.txt'
+
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t trivago .
+	  - docker run -t -i -p 80:80 trivago
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker images...
+      - docker push trivago:latest
